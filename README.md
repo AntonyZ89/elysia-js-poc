@@ -10,10 +10,12 @@ git clone https://github.com/AntonyZ89/elysia-js-poc
 To start the development server run:
 ```bash
 bun install
+bunx prisma migrate dev
 bun run dev
 ```
 
 Open http://localhost:3000/ with your browser to see the result.
+
 Open http://localhost:3000/docs to see the API documentation. **WARN:** not working 100% yet.
 
 ## What you will find here:

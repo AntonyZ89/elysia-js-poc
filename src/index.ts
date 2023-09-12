@@ -5,6 +5,8 @@ import { jwt } from '@elysiajs/jwt';
 import { swagger } from '@elysiajs/swagger';
 import { User } from '@prisma/client';
 
+type AppInstance = typeof app;
+
 const app = new Elysia()
   .state('user', null as null | User)
   .decorate('auth', AuthProvider)
@@ -25,7 +27,5 @@ const app = new Elysia()
 
 console.log(`Listening on port http:localhost:${app.server?.port}/`);
 console.log(`Swagger on port http://localhost:${app.server?.port}/docs`);
-
-type AppInstance = typeof app;
 
 export type { AppInstance };
